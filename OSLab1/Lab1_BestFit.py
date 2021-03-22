@@ -1,4 +1,4 @@
-def firstFit(block, job_size, x, y):
+def bestFit(block, job_size, x, y):
 
     index = [-1] * y
 
@@ -14,7 +14,7 @@ def firstFit(block, job_size, x, y):
 
         if(bestIndex != -1):
             index[i] = bestIndex
-            block[bestIndex] = -1  # busy
+            block[bestIndex] *= -1  # busy
             # block[bestIndex] -= job_size[i]
 
     print("Jobnumb\t" + "Job size\t" + " block allocated(index)")
@@ -34,4 +34,4 @@ job_size = [320, 150, 650, 127, 520]
 x = len(block)
 y = len(job_size)
 
-firstFit(block, job_size, x, y)
+bestFit(block, job_size, x, y)
