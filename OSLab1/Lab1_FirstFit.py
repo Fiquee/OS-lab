@@ -23,6 +23,8 @@ def firstFit(block, job_size, x, y):
 
 block = [300, 500, 400, 563, 433]  # kotak
 job_size = [320, 150, 650, 127, 520]  # bola
+# block = [222, 100, 400, 700]
+# job_size = [60, 75, 175, 275]
 
 x = len(block)
 y = len(job_size)

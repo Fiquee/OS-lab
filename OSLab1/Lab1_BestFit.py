@@ -30,6 +30,8 @@ def bestFit(block, job_size, x, y):
 
 block = [300, 500, 400, 563, 433]
 job_size = [320, 150, 650, 127, 520]
+# block = [222, 100, 400, 700]
+# job_size = [60, 75, 175, 275, 375]
 
 x = len(block)
 y = len(job_size)
