@@ -2,7 +2,7 @@
 def insert(file, files):
     if (file[2] < 0 or file[1] < 0):
         print()
-        print("file"+file[0]+" size or allocation cannot be negative")
+        print("file \"" + file[0]+"\" size or allocation cannot be negative")
         print()
         return
 
