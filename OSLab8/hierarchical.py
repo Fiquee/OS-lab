@@ -14,7 +14,10 @@ class Directory:
     def create_folder(self, name):
         curr = self.curr_node
 
-        if name in curr.subfolders:
+        if len(name) == 0:
+            print("Folder name cannot be empty, please try again")
+
+        elif name in curr.subfolders:
             print("Folder already exists")
 
         else:
@@ -23,7 +26,10 @@ class Directory:
     def create_file(self, name):
         curr = self.curr_node
 
-        if name in curr.files:
+        if len(name) == 0:
+            print("File name cannot be empty, please try again")
+
+        elif name in curr.files:
             print("File already exists")
 
         else:
@@ -106,7 +112,7 @@ def main():
     while True:
         print("Current Directory: ", dc.print_cd())
         x = input(
-            "Select the Function\n1 - Create Folder\n2 - Create File\n3 - Print Current Directory\n4 - Back to Previous Directory\nFileName - Change Directory\nExit - End\n")
+            "Select the Function\n1 - Create Folder\n2 - Create File\n3 - Print Current Directory\n4 - Back to Previous Directory\n5 - Change Directory\nExit - End\n")
 
         if x == "1":
             name = input("Insert Folder Name: ")
@@ -122,11 +128,15 @@ def main():
         elif x == "4":
             dc.prev_directory()
 
+        elif x == "5":
+            new_dir = input("Insert the Folder name to go into: ")
+            dc.change_directory(new_dir)
+
         elif x.lower() == "exit":
             break
 
         else:
-            dc.change_directory(x)
+            print("invalid command")
         print()
 
     dc.print_directory()
