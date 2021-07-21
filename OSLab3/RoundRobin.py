@@ -13,8 +13,8 @@ def sort_arrival_times(job_list):
                 continue
             elif job_list[2][i] < job_list[2][j]:
                 swap(job_list, i, j)
-    print("sorted list")            
-    print_time()            
+    print("sorted list")
+    print_time()
 
 def print_time():
     print("Job Number\tBurst Time\tArrival Time\tCompletion Time\tWaiting Time\tTurnaround Time")
@@ -35,12 +35,12 @@ def round_robin():
         print()
         for i in range(job_number):
             # Check arrival time
-            
+
             if (t+time_quantum >= array[2][i] and i+1 in not_yet_queue):
                 print("put job", array[0][i], "into the queue")
                 q.put(i)
                 not_yet_queue.remove(i+1)
-        print()        
+        print()
         index = q.get()
         jobnum= array[0][index]
         print("now doing job",jobnum)

@@ -1,6 +1,6 @@
 '''
-Write a program to simulate the Banker’s algorithm for the purpose of deadlock avoidance. 
-Your program receives as input the number of processes in the systems and how many devices each job requires to complete execution. 
+Write a program to simulate the Banker’s algorithm for the purpose of deadlock avoidance.
+Your program receives as input the number of processes in the systems and how many devices each job requires to complete execution.
 Your program shows how devices are allocated to each process as it executes and if the system is currently in a safe or unsafe state.
 '''
 

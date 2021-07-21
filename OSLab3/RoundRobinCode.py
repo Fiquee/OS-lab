@@ -12,8 +12,8 @@ def sort_arrival_times(job_list):
             if job_list[2][i] < job_list[2][j] :
                 print("swap",job_list[2][i],"with",job_list[2][j])
                 swap(job_list, i, j)
-    print("sorted list")            
-    print_time()            
+    print("sorted list")
+    print_time()
 
 def print_time():
     print("Job Number\tBurst Time\tArrival Time\tCompletion Time\tWaiting Time\tTurnaround Time")
@@ -38,7 +38,7 @@ def round_robin():
                 print("put job", array[0][i], "into the queue")
                 q.put(i)
                 not_yet_queue.remove(array[0][i])
-        print()        
+        print()
         index = q.get()
         jobnum= array[0][index]
         print("now doing job",jobnum)
@@ -78,7 +78,7 @@ array = [[0 for j in range(job_number)]
          for i in range(6)]  # Initialize 2D Array
 array[0] = [number for number in range(1, job_number+1)]
 array[1] = [9, 5, 3, 5] #burst time
-array[2] = [0, 2, 2, 3] #arrival time 
+array[2] = [0, 2, 2, 3] #arrival time
 
 # array[1] = [int(time) for time in input("Enter burst time: ").split()]
 # array[2] = [int(time) for time in input("Enter arrival time: ").split()]
